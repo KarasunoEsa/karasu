@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <string.h>
-// â– è‡ªä½œé–¢æ•°ï¼šç”»é¢ã®å¥½ããªä½ç½®ã«æ–‡å­—ãŒæ›¸ã‘ã‚‹ã‚ˆã†ã«ãªã‚‹
+// ¡©ìŠÖ”F‰æ–Ê‚ÌD‚«‚ÈˆÊ’u‚É•¶š‚ª‘‚¯‚é‚æ‚¤‚É‚È‚é
 void karasuxy(int x,int y) {
     HANDLE hCOut;
     COORD Coord;
@@ -13,23 +13,23 @@ void karasuxy(int x,int y) {
     SetConsoleCursorPosition(hCOut, Coord);
 }
 int main() {
-    int ws = 0; //while stopã®ç•¥
+    int ws = 0; //while stop‚Ì—ª
     int data1 = 4;
-    int uma1 = 0;  //é¦¬ï¼‘ã®Xåº§æ¨™ã‚’ï¼ã«è¨­å®šï¼ˆä¸€ç•ªå·¦ç«¯ã‹ã‚‰ã‚¹ã‚¿ãƒ¼ãƒˆï¼‰
-    int uma2 = 0;  //é¦¬ï¼’ã®Xåº§æ¨™ã‚’ï¼ã«è¨­å®šï¼ˆä¸€ç•ªå·¦ç«¯ã‹ã‚‰ã‚¹ã‚¿ãƒ¼ãƒˆï¼‰
-    int uma3 = 0;  //é¦¬ï¼“ã®Xåº§æ¨™ã‚’ï¼ã«è¨­å®šï¼ˆä¸€ç•ªå·¦ç«¯ã‹ã‚‰ã‚¹ã‚¿ãƒ¼ãƒˆï¼‰
-    int b; //ãƒ©ãƒ³ãƒ€ãƒ é¸æŠç”¨
+    int uma1 = 0;  //”n‚P‚ÌXÀ•W‚ğ‚O‚Éİ’èiˆê”Ô¶’[‚©‚çƒXƒ^[ƒgj
+    int uma2 = 0;  //”n‚Q‚ÌXÀ•W‚ğ‚O‚Éİ’èiˆê”Ô¶’[‚©‚çƒXƒ^[ƒgj
+    int uma3 = 0;  //”n‚R‚ÌXÀ•W‚ğ‚O‚Éİ’èiˆê”Ô¶’[‚©‚çƒXƒ^[ƒgj
+    int b; //ƒ‰ƒ“ƒ_ƒ€‘I‘ğ—p
     int atari;
     char key;
     srand(time(NULL));
-    printf("â– ã‚«ãƒ©ã‚¹ã®ãƒ€ãƒ¼ãƒ“ãƒ¼\n");
-    printf("â– â– äºˆæƒ³â– â– \n\n");
-    printf("ï¼ºãƒ»ï¼¸ã‚­ãƒ¼ï¼šä¸Šä¸‹ã®é¸æŠ\tã‚¹ãƒšãƒ¼ã‚¹ï¼šãƒ¬ãƒ¼ã‚¹ã‚¹ã‚¿ãƒ¼ãƒˆ");
-    karasuxy(1,4); printf("ãƒ»é¦¬ï¼‘");
-    karasuxy(1,5); printf("ãƒ»é¦¬ï¼’");
-    karasuxy(1,6); printf("ãƒ»é¦¬ï¼“");
+    printf("ƒ_[ƒr[\n");
+    printf("¡¡—\‘z¡¡\n\n");
+    printf("‚yE‚wƒL[Fã‰º‚Ì‘I‘ğ\tƒXƒy[ƒXFƒŒ[ƒXƒXƒ^[ƒg");
+    karasuxy(1,4); printf("E”n‚P");
+    karasuxy(1,5); printf("E”n‚Q");
+    karasuxy(1,6); printf("E”n‚R");
     while(ws==0) {
-        karasuxy(8,data1); printf("â†");
+        karasuxy(8,data1); printf("©");
         if(kbhit()) {
             key = getch();
         } else key = 0; 
@@ -39,7 +39,7 @@ int main() {
             if(data1 == 7) {
                 karasuxy(8,data1); printf("  ");
                 data1 = 4;
-                karasuxy(8,data1); printf("â†");
+                karasuxy(8,data1); printf("©");
             }
         }
         if(key == 'z') {
@@ -48,53 +48,53 @@ int main() {
             if(data1 == 3) {
                 karasuxy(8,data1); printf("  ");
                 data1 = 6;
-                karasuxy(8,data1); printf("â†");
+                karasuxy(8,data1); printf("©");
             }
         }
         if(key == ' ') {
-            ws = 1;   //ãƒ¬ãƒ¼ã‚¹ã‚¹ã‚¿ãƒ¼ãƒˆ
+            ws = 1;   //ƒŒ[ƒXƒXƒ^[ƒg
         }
     }
     ws = 0;
-    Sleep(2500);   //ãƒ¬ãƒ¼ã‚¹ã‚’å§‹ã‚ã‚‹å‰ã«2.5ç§’ã»ã©åœæ­¢
+    Sleep(2500);   //ƒŒ[ƒX‚ğn‚ß‚é‘O‚É2.5•b‚Ù‚Ç’â~
     while(ws == 0) {
-        //â– é¦¬ã‚’å‹•ã‹ã™å‰ã«ã™ã¹ã¦ã®é¦¬ã‚’å…ˆã«æ¶ˆã—ã¦ãŠã
-        //é¦¬ï¼‘ã‚’æ¶ˆã™
-        karasuxy(uma1,9);printf(" ");    //(uma1,2)ã®åœ°ç‚¹ã®ç”»åƒã‚’æ¶ˆã™ï¼ˆã‚¹ãƒšãƒ¼ã‚¹ã§å¡—ã‚Šæ›¿ãˆã‚‹ï¼‰
-        //é¦¬ï¼’ã‚’æ¶ˆã™
-        karasuxy(uma2,10);printf(" ");    //(uma2,3)ã®åœ°ç‚¹ã®ç”»åƒã‚’æ¶ˆã™ï¼ˆã‚¹ãƒšãƒ¼ã‚¹ã§å¡—ã‚Šæ›¿ãˆã‚‹ï¼‰
-        //é¦¬ï¼“ã‚’æ¶ˆã™
-        karasuxy(uma3,11);printf(" ");    //(uma2,3)ã®åœ°ç‚¹ã®ç”»åƒã‚’æ¶ˆã™ï¼ˆã‚¹ãƒšãƒ¼ã‚¹ã§å¡—ã‚Šæ›¿ãˆã‚‹ï¼‰
-        //ã©ã®é¦¬ã‚’å‹•ã‹ã™ã‹ã‚’ãƒ©ãƒ³ãƒ€ãƒ ã§æ±ºã‚ã‚‹
+        //¡”n‚ğ“®‚©‚·‘O‚É‚·‚×‚Ä‚Ì”n‚ğæ‚ÉÁ‚µ‚Ä‚¨‚­
+        //”n‚P‚ğÁ‚·
+        karasuxy(uma1,9);printf(" ");    //(uma1,2)‚Ì’n“_‚Ì‰æ‘œ‚ğÁ‚·iƒXƒy[ƒX‚Å“h‚è‘Ö‚¦‚éj
+        //”n‚Q‚ğÁ‚·
+        karasuxy(uma2,10);printf(" ");    //(uma2,3)‚Ì’n“_‚Ì‰æ‘œ‚ğÁ‚·iƒXƒy[ƒX‚Å“h‚è‘Ö‚¦‚éj
+        //”n‚R‚ğÁ‚·
+        karasuxy(uma3,11);printf(" ");    //(uma2,3)‚Ì’n“_‚Ì‰æ‘œ‚ğÁ‚·iƒXƒy[ƒX‚Å“h‚è‘Ö‚¦‚éj
+        //‚Ç‚Ì”n‚ğ“®‚©‚·‚©‚ğƒ‰ƒ“ƒ_ƒ€‚ÅŒˆ‚ß‚é
         b = rand()%10;
         switch(b) {
-        case 0: uma1++; break;    //é¦¬ï¼‘ã‚’å‹•ã‹ã™
-        case 1: uma2++; break;    //é¦¬ï¼’ã‚’å‹•ã‹ã™
-        case 2: uma3++; break;    //é¦¬ï¼“ã‚’å‹•ã‹ã™
+        case 0: uma1++; break;    //”n‚P‚ğ“®‚©‚·
+        case 1: uma2++; break;    //”n‚Q‚ğ“®‚©‚·
+        case 2: uma3++; break;    //”n‚R‚ğ“®‚©‚·
         }
-        //ã‚´ãƒ¼ãƒ«ã®ç·šã‚’å¼•ã
-        karasuxy(50,9);printf("|");  //(50,2)ã®åœ°ç‚¹ã«ã‚´ãƒ¼ãƒ«ã®ç·šã‚’æç”»
-        karasuxy(50,10);printf("|");  //(50,3)ã®åœ°ç‚¹ã«ã‚´ãƒ¼ãƒ«ã®ç·šã‚’æç”»
-        karasuxy(50,11);printf("|");  //(50,4)ã®åœ°ç‚¹ã«ã‚´ãƒ¼ãƒ«ã®ç·šã‚’æç”»
-        //é¦¬ï¼‘ã‚’æç”»
-        karasuxy(uma1,9);printf("â—†");  //(uma1,2)ã®åœ°ç‚¹ã«é¦¬ã‚’æç”»
-        karasuxy(uma2,10);printf("â—");  //(uma2,3)ã®åœ°ç‚¹ã«é¦¬ã‚’æç”»
-        karasuxy(uma3,11);printf("â– ");  //(uma3,4)ã®åœ°ç‚¹ã«é¦¬ã‚’æç”»
-        //ã‚²ãƒ¼ãƒ ãŒé€Ÿã™ãã‚‹ã®ã§äººå·¥çš„ã«ãƒ•ãƒªãƒ¼ã‚ºã‚’ç™ºç”Ÿã•ã›ã‚‹
+        //ƒS[ƒ‹‚Ìü‚ğˆø‚­
+        karasuxy(50,9);printf("|");  //(50,2)‚Ì’n“_‚ÉƒS[ƒ‹‚Ìü‚ğ•`‰æ
+        karasuxy(50,10);printf("|");  //(50,3)‚Ì’n“_‚ÉƒS[ƒ‹‚Ìü‚ğ•`‰æ
+        karasuxy(50,11);printf("|");  //(50,4)‚Ì’n“_‚ÉƒS[ƒ‹‚Ìü‚ğ•`‰æ
+        //”n‚P‚ğ•`‰æ
+        karasuxy(uma1,9);printf("Ÿ");  //(uma1,2)‚Ì’n“_‚É”n‚ğ•`‰æ
+        karasuxy(uma2,10);printf("œ");  //(uma2,3)‚Ì’n“_‚É”n‚ğ•`‰æ
+        karasuxy(uma3,11);printf("¡");  //(uma3,4)‚Ì’n“_‚É”n‚ğ•`‰æ
+        //ƒQ[ƒ€‚ª‘¬‚·‚¬‚é‚Ì‚ÅlH“I‚ÉƒtƒŠ[ƒY‚ğ”­¶‚³‚¹‚é
         Sleep(20);
         if(uma1==50) ws=1;
-        if(uma2==50) ws=2;
-        if(uma3==50) ws=3;
+        else if(uma2==50) ws=2;
+        else if(uma3==50) ws=3;
     }
-    //â– ãƒ¬ãƒ¼ã‚¹ãŒçµ‚ã‚ã£ã¦whileãŒçµ‚ã‚ã£ãŸã‚ã¨ã«ãƒã‚§ãƒƒã‚¯ã™ã‚‹
-    //atariï¼ï¼ï¼šäºˆæƒ³ãƒã‚ºãƒ¬ã€ï¼‘ï¼šäºˆæƒ³ã‚¢ã‚¿ãƒª
-    atari = 0;  //ã¾ãšã¯ãƒã‚ºãƒ¬ã«ã—ã¦ãŠã
-    if(ws==1 && data1==5) atari=1;    //ã‚¢ã‚¿ãƒªã«å¤‰æ›´
-    if(ws==2 && data1==6) atari=1;    //ã‚¢ã‚¿ãƒªã«å¤‰æ›´
-    if(ws==3 && data1==7) atari=1;    //ã‚¢ã‚¿ãƒªã«å¤‰æ›´
-    //ã©ã‚Œã‹ï¼‘ã¤ã§ã‚‚"ã‚¢ã‚¿ãƒª"ãŒãƒ’ãƒƒãƒˆã—ãŸã‚‰â€ã‚¢ã‚¿ãƒªâ€ã¨è¡¨ç¤º
-    if(atari==0) MessageBox(NULL,"ãƒã‚ºãƒ¬","çµæœ",MB_OK);
-    if(atari==1) MessageBox(NULL,"ã‚¢ã‚¿ãƒª","çµæœ",MB_OK);
+    //¡ƒŒ[ƒX‚ªI‚í‚Á‚Äwhile‚ªI‚í‚Á‚½‚ ‚Æ‚Éƒ`ƒFƒbƒN‚·‚é
+    //atari‚OF—\‘zƒnƒYƒŒA‚PF—\‘zƒAƒ^ƒŠ
+    atari = 0;  //‚Ü‚¸‚ÍƒnƒYƒŒ‚É‚µ‚Ä‚¨‚­
+    if(ws==1 && data1==4) atari=1;    //ƒAƒ^ƒŠ‚É•ÏX
+    if(ws==2 && data1==5) atari=1;    //ƒAƒ^ƒŠ‚É•ÏX
+    if(ws==3 && data1==6) atari=1;    //ƒAƒ^ƒŠ‚É•ÏX
+    //‚Ç‚ê‚©‚P‚Â‚Å‚à"ƒAƒ^ƒŠ"‚ªƒqƒbƒg‚µ‚½‚çhƒAƒ^ƒŠh‚Æ•\¦
+    if(atari==0) MessageBox(NULL,"ƒnƒYƒŒ","Œ‹‰Ê",MB_OK);
+    if(atari==1) MessageBox(NULL,"ƒAƒ^ƒŠ","Œ‹‰Ê",MB_OK);
     
     getch();
     return 0;
