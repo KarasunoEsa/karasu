@@ -2,12 +2,6 @@
 
 // プロトタイプ宣言
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-static HDC backHDC; // back → 背景のＨＤＣ
-static HBITMAP backBMP; // back → 背景のＢＭＰ
-static HDC markHDC; // マークを読み込む変数ＨＤＣ
-static HBITMAP markBMP; // マークを読み込む変数ＢＭＰ
-HDC hdc;
-
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,PSTR lpCmdLine, int nCmdShow)
 {
